@@ -24,6 +24,7 @@ internal class Program
         
         win.AddScene(new ProjectListScene());
         win.AddScene(new ProjectAddScene());
+        win.AddScene(new ProjectEditScene());
 
         win.IndexCurrentScene = 0;
 

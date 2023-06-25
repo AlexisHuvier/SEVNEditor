@@ -1,6 +1,7 @@
 using SEVNEditor.Manager;
 using SEVNEditor.Project;
 using SEVNEditor.Scene;
+using SharpEngine;
 using SharpEngine.Math;
 using SharpEngine.Utils;
 using SharpEngine.Widget;
@@ -15,7 +16,11 @@ public class ProjectWidget: Widget
         AddChild(new Label(new Vec2(0, -50), project.Name, "basic_40"));
         AddChild(new Label(new Vec2(0), $"SEVN Version : {project.SEVNVersion} - Author : {project.Author}",
             "basic_30"));
-        AddChild(new Button(new Vec2(-125, 60), "Edit", "basic_30", new Vec2(200, 40)));
+        AddChild(new Button(new Vec2(-125, 60), "Edit", "basic_30", new Vec2(200, 40))).Clicked += (_, _) =>
+        {
+            Scene!.Window!.IndexCurrentScene = 2;
+            Scene!.Window!.GetCurrentScene<ProjectEditScene>().UpdateScene(project);
+        };
         AddChild(new Button(new Vec2(125, 60), "Delete", "basic_30", new Vec2(200, 40))).Clicked += (_, _) =>
         {
             ProjectManager.RemoveProject(project.Name);
