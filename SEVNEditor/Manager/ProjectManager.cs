@@ -11,6 +11,22 @@ public static class ProjectManager
 
     public static Dictionary<string, VnProject> GetProjects() => _projects;
 
+    public static void RemoveProject(string name)
+    {
+        Directory.Delete(Path.Join("Projects", name), true);
+        _projects.Remove(name);
+    }
+
+    public static bool HasProject(string name) => _projects.ContainsKey(name);
+
+    public static void AddProject(string name, string author)
+    {
+        Directory.CreateDirectory(Path.Join("Projects", name));
+        var project = new VnProject { Name = name, Author = author, SEVNVersion = 1 };
+        project.Save();
+        _projects.Add(name, project);
+    }
+
     public static void ReloadProjects()
     {
         _projects.Clear();
