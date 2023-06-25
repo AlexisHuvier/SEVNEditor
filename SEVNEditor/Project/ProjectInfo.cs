@@ -2,7 +2,7 @@ using System.Text.Json;
 
 namespace SEVNEditor.Project;
 
-public class VnProject
+public class ProjectInfo
 {
     public string Name { get; set; }
     public string Author { get; set; }

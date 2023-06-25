@@ -9,7 +9,7 @@ namespace SEVNEditor.Widgets;
 
 public class ProjectWidget: Widget
 {
-    public ProjectWidget(Vec2 position, VnProject project) : base(position)
+    public ProjectWidget(Vec2 position, ProjectInfo project) : base(position)
     {
         AddChild(new Frame(Vec2.Zero, new Vec2(1000, 200), new Vec2(5), Color.Black, Constants.LightBgColor));
         AddChild(new Label(new Vec2(0, -50), project.Name, "basic_40"));
