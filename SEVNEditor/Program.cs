@@ -14,7 +14,10 @@ internal class Program
 
         #region Resource Loading
 
-        win.FontManager.AddFont("basic_25", "Resource/basic.ttf");
+        win.FontManager.AddFont("basic_30", "Resource/Candy-Beans.ttf", 30);
+        win.FontManager.AddFont("basic_35", "Resource/Candy-Beans.ttf", 35);
+        win.FontManager.AddFont("basic_40", "Resource/Candy-Beans.ttf", 40);
+        win.FontManager.AddFont("basic_75", "Resource/Candy-Beans.ttf", 75);
 
         #endregion
         

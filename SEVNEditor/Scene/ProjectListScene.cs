@@ -12,12 +12,14 @@ public class ProjectListScene: SharpEngine.Scene
 
     public ProjectListScene()
     {
-        AddWidget(new Label(new Vec2(600, 75), "Sharp Engine Visual Novel Editor", "RAYLIB_DEFAULT", fontSize: 65));
+        AddWidget(new Label(new Vec2(600, 75), "Sharp Engine Visual Novel Editor", "basic_75"));
+
         AddWidget(
-            new Button(new Vec2(600, 700), "Ajouter un Projet", "RAYLIB_DEFAULT", new Vec2(700, 60), fontSize: 25));
+                new Button(new Vec2(600, 700), "Add a Project", "basic_35", new Vec2(700, 60))).Clicked +=
+            (_, _) => Window!.IndexCurrentScene = 1;
         
         AddWidget(
-            new Button(new Vec2(1150, 390), ">", "RAYLIB_DEFAULT", new Vec2(50), fontSize: 25)).Clicked += (_, _) =>
+            new Button(new Vec2(1150, 390), ">", "basic_35", new Vec2(50))).Clicked += (_, _) =>
         {
             _indexStart += 2;
             var projects = ProjectManager.GetProjects();
@@ -27,7 +29,7 @@ public class ProjectListScene: SharpEngine.Scene
         };
         
         AddWidget(
-            new Button(new Vec2(50, 390), "<", "RAYLIB_DEFAULT", new Vec2(50), fontSize: 25)).Clicked += (_, _) =>
+            new Button(new Vec2(50, 390), "<", "basic_35", new Vec2(50))).Clicked += (_, _) =>
         {
             _indexStart -= 2;
             if (_indexStart < 0)

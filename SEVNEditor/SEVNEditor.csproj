@@ -11,4 +11,10 @@
       <PackageReference Include="SharpEngine" Version="1.1.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Resource\Candy-Beans.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
