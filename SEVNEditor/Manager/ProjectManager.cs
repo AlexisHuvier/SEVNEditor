@@ -7,29 +7,29 @@ namespace SEVNEditor.Manager;
 
 public static class ProjectManager
 {
-    private static readonly Dictionary<string, ProjectInfo> _projects = new();
+    private static readonly Dictionary<string, ProjectInfo> Projects = new();
 
-    public static Dictionary<string, ProjectInfo> GetProjects() => _projects;
+    public static Dictionary<string, ProjectInfo> GetProjects() => Projects;
 
     public static void RemoveProject(string name)
     {
         Directory.Delete(Path.Join("Projects", name), true);
-        _projects.Remove(name);
+        Projects.Remove(name);
     }
 
-    public static bool HasProject(string name) => _projects.ContainsKey(name);
+    public static bool HasProject(string name) => Projects.ContainsKey(name);
 
     public static void AddProject(string name, string author)
     {
         Directory.CreateDirectory(Path.Join("Projects", name));
         var project = new ProjectInfo { Name = name, Author = author, SEVNVersion = 1 };
         project.Save();
-        _projects.Add(name, project);
+        Projects.Add(name, project);
     }
 
     public static void ReloadProjects()
     {
-        _projects.Clear();
+        Projects.Clear();
 
         if (!Directory.Exists("Projects"))
             Directory.CreateDirectory("Projects");
@@ -44,7 +44,7 @@ public static class ProjectManager
                 if (project != null)
                 {
                     DebugManager.Log(LogLevel.LogDebug, $"PROJECT: New detected project : {project.Name}");
-                    _projects.Add(project.Name, project);
+                    Projects.Add(project.Name, project);
                 }
             }
         }
