@@ -2,7 +2,6 @@
 using SEVNEditor.Manager;
 using SEVNEditor.Scene;
 using SharpEngine;
-using SharpEngine.Utils;
 
 namespace SEVNEditor;
 
