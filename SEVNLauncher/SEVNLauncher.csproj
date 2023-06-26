@@ -8,7 +8,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="SharpEngine" Version="1.2.0" />
+      <PackageReference Include="SharpEngine" Version="1.2.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SEVNCore\SEVNCore.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Resource\Candy-Beans.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEVNEditor", "SEVNEditor\SE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEVNLauncher", "SEVNLauncher\SEVNLauncher.csproj", "{6B76296E-668B-4644-B867-80ADB33D8DCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEVNCore", "SEVNCore\SEVNCore.csproj", "{1D46D6BA-389C-4CDE-BA15-1472BFD7217D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{6B76296E-668B-4644-B867-80ADB33D8DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B76296E-668B-4644-B867-80ADB33D8DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B76296E-668B-4644-B867-80ADB33D8DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D46D6BA-389C-4CDE-BA15-1472BFD7217D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D46D6BA-389C-4CDE-BA15-1472BFD7217D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D46D6BA-389C-4CDE-BA15-1472BFD7217D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D46D6BA-389C-4CDE-BA15-1472BFD7217D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

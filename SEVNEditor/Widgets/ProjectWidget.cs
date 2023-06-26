@@ -1,7 +1,6 @@
+using SEVNCore.Project;
 using SEVNEditor.Manager;
-using SEVNEditor.Project;
 using SEVNEditor.Scene;
-using SharpEngine;
 using SharpEngine.Math;
 using SharpEngine.Utils;
 using SharpEngine.Widget;

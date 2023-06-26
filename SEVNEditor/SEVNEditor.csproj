@@ -8,13 +8,33 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="SharpEngine" Version="1.2.0" />
+      <PackageReference Include="SharpEngine" Version="1.2.2" />
     </ItemGroup>
 
     <ItemGroup>
       <None Update="Resource\Candy-Beans.ttf">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="Resource\Launcher\cimgui.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Resource\Launcher\raylib.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Resource\Launcher\SEVNLauncher.exe">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Resource\Launcher\Resource\Candy-Beans.ttf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resource\Launcher\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SEVNCore\SEVNCore.csproj" />
     </ItemGroup>
 
 </Project>
