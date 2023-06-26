@@ -9,7 +9,11 @@ public class ProjectEditScene: SharpEngine.Scene
     public void UpdateScene(ProjectInfo info)
     {
         RemoveAllWidgets();
-        
-        AddWidget(new Label(new Vec2(600, 50), info.Name, "basic_30"));
+
+        AddWidget(new Label(new Vec2(600, 40), info.Name, "basic_75"));
+
+        AddWidget(new Button(new Vec2(250, 110), "Characters", "basic_40", new Vec2(300, 40)));
+        AddWidget(new Button(new Vec2(600, 110), "Scripts", "basic_40", new Vec2(300, 40)));
+        AddWidget(new Button(new Vec2(950, 110), "Parameters", "basic_40", new Vec2(300, 40)));
     }
 }
